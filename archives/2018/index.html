@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/css/mic_main.css" />
     <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <link rel="stylesheet" href="/css/live2d.css" />
     <meta name="keywords" content="isWangzl" />
     
     	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -19,6 +20,10 @@
     <noscript>
         <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
+
+
+
+
     <style type="text/css">
         body:before {
           content: ' ';
@@ -28,7 +33,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-size: cover; 
+          background-size: cover;
         }
     </style>
 
@@ -62,6 +67,8 @@
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/live2d.js"></script>
+
 	
 </head>
     
@@ -78,11 +85,25 @@
                 <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
         </div>
+
+    <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+    </div>
+
+    <script type="text/javascript">
+    var message_Path = '/live2d/';
+    var home_Path = 'hant.live';
+    loadlive2d("live2d", "/live2d/asuna_01/asuna_01.model.json");
+</script>
+
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">大猪蹄子</a>
 </header>
+
         <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
